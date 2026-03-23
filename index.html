@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deesa Traders – International Export Quality</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Tenor+Sans&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #E8C97A;
+    --gold-dark: #8C6D24;
+    --cream: #FAF6EE;
+    --ivory: #F4EDD9;
+    --dark: #1A1208;
+    --warm-brown: #3B2A14;
+    --text-mid: #6B5230;
+    --usa: #B22234;
+    --india: #FF9933;
+    --me: #009B77;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--cream); color: var(--dark); font-family: 'Cormorant Garamond', serif; overflow-x: hidden; }
+
+  /* ─── HEADER ─── */
+  header {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: linear-gradient(135deg, var(--warm-brown) 0%, var(--dark) 100%);
+    border-bottom: 1px solid var(--gold-dark);
+    padding: 0 5%; height: 80px;
+    display: flex; align-items: center; justify-content: space-between;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.35);
+  }
+
+  .header-left { display: flex; align-items: center; gap: 18px; }
+
+  .logo-mark { width: 52px; height: 52px; flex-shrink: 0; }
+
+  .header-title {
+    font-family: 'Cinzel', serif; font-size: 1.05rem; font-weight: 600;
+    color: var(--gold-light); letter-spacing: 0.12em; line-height: 1.2;
+  }
+
+  .header-title span {
+    display: block; font-size: 0.58rem; color: var(--gold);
+    letter-spacing: 0.28em; font-weight: 400; margin-top: 3px;
+  }
+
+  .header-right { text-align: right; }
+
+  .header-right .tagline {
+    font-family: 'Tenor Sans', sans-serif; font-size: 0.72rem;
+    color: var(--gold-light); letter-spacing: 0.14em; line-height: 1.7;
+  }
+
+  .header-right .badge {
+    display: inline-block; font-family: 'Cinzel', serif; font-size: 0.52rem;
+    letter-spacing: 0.3em; color: var(--gold);
+    border: 1px solid var(--gold-dark); padding: 3px 10px; margin-top: 5px;
+  }
+
+  /* ─── HERO ─── */
+  .hero {
+    min-height: 100vh; display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    position: relative; padding: 120px 5% 100px;
+    background: radial-gradient(ellipse 80% 60% at 50% 30%, rgba(201,168,76,0.10) 0%, transparent 70%),
+                linear-gradient(180deg, #1A1208 0%, #2C1E0C 45%, #3B2A14 100%);
+    overflow: hidden;
+  }
+
+  .hero-bg-pattern {
+    position: absolute; inset: 0; pointer-events: none;
+    background-image:
+      repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(201,168,76,0.025) 40px, rgba(201,168,76,0.025) 41px),
+      repeating-linear-gradient(-45deg, transparent, transparent 40px, rgba(201,168,76,0.025) 40px, rgba(201,168,76,0.025) 41px);
+  }
+
+  .hero-ornament {
+    width: 300px; height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin: 0 auto 34px; position: relative;
+  }
+  .hero-ornament::before, .hero-ornament::after {
+    content: '◆'; position: absolute; top: 50%; transform: translateY(-50%);
+    color: var(--gold); font-size: 10px;
+  }
+  .hero-ornament::before { left: 0; }
+  .hero-ornament::after { right: 0; }
+
+  .hero-eyebrow {
+    font-family: 'Tenor Sans', sans-serif; font-size: 0.62rem;
+    letter-spacing: 0.42em; color: var(--gold); text-transform: uppercase;
+    margin-bottom: 20px; text-align: center;
+  }
+
+  .hero-headline {
+    font-family: 'Cinzel', serif; font-size: clamp(3rem, 6vw, 5.8rem);
+    font-weight: 700; color: var(--cream); text-align: center;
+    line-height: 1.05; letter-spacing: 0.02em; position: relative; z-index: 1;
+  }
+  .hero-headline em { font-style: normal; color: var(--gold-light); }
+
+  .hero-sub {
+    font-size: 1.25rem; font-weight: 300; color: rgba(250,246,238,0.6);
+    text-align: center; margin-top: 22px; font-style: italic; letter-spacing: 0.04em;
+  }
+
+  .export-strip {
+    margin-top: 58px; display: flex; align-items: center;
+    flex-wrap: wrap; justify-content: center; gap: 6px; position: relative; z-index: 1;
+  }
+
+  .export-strip-text {
+    font-family: 'Tenor Sans', sans-serif; font-size: 0.82rem;
+    letter-spacing: 0.18em; color: rgba(250,246,238,0.58); text-transform: uppercase;
+  }
+
+  .export-strip-divider { width: 36px; height: 1px; background: var(--gold-dark); margin: 0 16px; }
+
+  .country-tag {
+    font-family: 'Cinzel', serif; font-size: 1.1rem; font-weight: 600;
+    letter-spacing: 0.15em; margin: 0 10px;
+    position: relative; padding-bottom: 3px; cursor: default;
+  }
+  .country-tag::after {
+    content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+    height: 1px; background: currentColor; opacity: 0.4;
+    transform: scaleX(0); transition: transform 0.3s ease;
+  }
+  .country-tag:hover::after { transform: scaleX(1); }
+  .tag-usa { color: var(--usa); }
+  .tag-india { color: var(--india); }
+  .tag-me { color: var(--me); }
+
+  .country-sep { color: var(--gold-dark); font-size: 0.7rem; margin: 0 2px; }
+
+  .hero-scroll {
+    position: absolute; bottom: 36px; left: 50%; transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+    color: var(--gold-dark); font-family: 'Tenor Sans', sans-serif;
+    font-size: 0.54rem; letter-spacing: 0.3em; text-transform: uppercase;
+    animation: scrollPulse 2.4s ease-in-out infinite; cursor: pointer;
+  }
+  @keyframes scrollPulse {
+    0%, 100% { opacity: 0.5; transform: translateX(-50%) translateY(0); }
+    50% { opacity: 1; transform: translateX(-50%) translateY(6px); }
+  }
+  .scroll-line { width: 1px; height: 40px; background: linear-gradient(180deg, var(--gold), transparent); }
+
+  /* ─── MARQUEE ─── */
+  .marquee-wrap {
+    background: var(--warm-brown); padding: 18px 0; overflow: hidden;
+    border-top: 1px solid var(--gold-dark); border-bottom: 1px solid var(--gold-dark);
+  }
+  .marquee-track {
+    display: flex; white-space: nowrap;
+    animation: marquee 28s linear infinite;
+  }
+  .marquee-item {
+    font-family: 'Tenor Sans', sans-serif; font-size: 0.63rem; letter-spacing: 0.35em;
+    text-transform: uppercase; color: var(--gold); padding: 0 44px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .marquee-dot { width: 4px; height: 4px; background: var(--gold-dark); border-radius: 50%; flex-shrink: 0; }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* ─── SECTION GLOBALS ─── */
+  .section-header { text-align: center; margin-bottom: 68px; }
+  .section-eyebrow {
+    font-family: 'Tenor Sans', sans-serif; font-size: 0.6rem;
+    letter-spacing: 0.44em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px;
+  }
+  .section-title {
+    font-family: 'Cinzel', serif; font-size: clamp(1.9rem, 3.5vw, 3rem);
+    font-weight: 600; color: var(--warm-brown); line-height: 1.12;
+  }
+  .section-rule {
+    width: 88px; height: 2px;
+    background: linear-gradient(90deg, transparent 0%, var(--gold) 25%, var(--gold) 75%, transparent 100%);
+    margin: 22px auto 0;
+  }
+
+  /* ─── PRODUCTS ─── */
+  .products { padding: 120px 5%; background: var(--ivory); }
+  .products-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 42px; max-width: 1160px; margin: 0 auto;
+  }
+
+  .product-card {
+    background: #fff; border: 1px solid rgba(201,168,76,0.15);
+    overflow: hidden; position: relative; cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.25,0.46,0.45,0.94);
+    box-shadow: 0 2px 12px rgba(26,18,8,0.06), 0 8px 32px rgba(26,18,8,0.04);
+  }
+  .product-card::before {
+    content: ''; position: absolute; inset: 0;
+    border: 2px solid var(--gold); opacity: 0;
+    transition: opacity 0.3s ease; z-index: 2; pointer-events: none;
+  }
+  .product-card:hover { transform: translateY(-12px); box-shadow: 0 12px 48px rgba(26,18,8,0.15), 0 24px 64px rgba(201,168,76,0.08); }
+  .product-card:hover::before { opacity: 1; }
+
+  .card-img-wrap {
+    width: 100%; aspect-ratio: 4/3; overflow: hidden;
+    position: relative; background: #2a1f0e;
+  }
+  .card-img-wrap img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25,0.46,0.45,0.94);
+    filter: sepia(0.12) brightness(0.96);
+  }
+  .product-card:hover .card-img-wrap img { transform: scale(1.06); filter: sepia(0.04) brightness(1.02); }
+
+  .card-img-label {
+    position: absolute; top: 16px; right: 16px;
+    background: var(--warm-brown); color: var(--gold-light);
+    font-family: 'Cinzel', serif; font-size: 0.48rem;
+    letter-spacing: 0.3em; padding: 5px 12px; z-index: 3;
+  }
+
+  .card-body { padding: 36px 32px 40px; text-align: center; }
+
+  .card-name {
+    font-family: 'Cinzel', serif; font-size: 1.2rem; font-weight: 600;
+    color: var(--warm-brown); letter-spacing: 0.08em; margin-bottom: 18px;
+    position: relative; padding-bottom: 18px;
+  }
+  .card-name::after {
+    content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+    width: 32px; height: 2px; background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    transition: width 0.4s ease;
+  }
+  .product-card:hover .card-name::after { width: 72px; }
+
+  .card-desc { font-size: 0.95rem; font-weight: 300; color: var(--text-mid); line-height: 1.82; font-style: italic; letter-spacing: 0.003em; }
+
+  /* ─── ABOUT ─── */
+  .about { padding: 120px 5%; background: var(--cream); }
+  .about-inner {
+    max-width: 1160px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+  }
+
+  .about-images { position: relative; height: 490px; }
+
+  .about-img {
+    position: absolute; width: 67%; aspect-ratio: 3/4; object-fit: cover;
+    border: 3px solid var(--cream);
+    box-shadow: 0 12px 48px rgba(26,18,8,0.22);
+    transition: transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94), box-shadow 0.4s ease, filter 0.4s ease;
+    cursor: pointer; filter: sepia(0.1) brightness(0.96);
+  }
+  .about-img:nth-child(1) { top: 0; left: 0; z-index: 3; transform: rotate(-4deg); }
+  .about-img:nth-child(2) { top: 42px; left: 18%; z-index: 2; transform: rotate(2deg); }
+  .about-img:nth-child(3) { top: 84px; left: 36%; z-index: 1; transform: rotate(6deg); }
+  .about-img:hover {
+    z-index: 10 !important; transform: rotate(0deg) scale(1.06) !important;
+    box-shadow: 0 24px 64px rgba(26,18,8,0.35); filter: sepia(0) brightness(1.04);
+  }
+
+  .about-content .section-header { text-align: left; margin-bottom: 28px; }
+  .about-content .section-rule { margin: 18px 0 0; }
+
+  .about-text {
+    font-size: 1.02rem; font-weight: 300; color: var(--text-mid);
+    line-height: 1.9; margin-top: 26px;
+  }
+  .about-text strong { color: var(--warm-brown); font-weight: 500; }
+
+  .about-stats {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 48px;
+  }
+  .stat-box {
+    border-left: 3px solid var(--gold); padding-left: 20px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+  }
+  .stat-box:hover { transform: translateX(4px); border-color: var(--gold-light); }
+  .stat-num { font-family: 'Cinzel', serif; font-size: 2rem; color: var(--gold-dark); font-weight: 700; line-height: 1; letter-spacing: -0.02em; }
+  .stat-label { font-family: 'Tenor Sans', sans-serif; font-size: 0.6rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--text-mid); margin-top: 8px; font-weight: 500; }
+
+  /* ─── CONTACT ─── */
+  .contact {
+    padding: 120px 5%;
+    background: linear-gradient(160deg, var(--ivory) 0%, var(--cream) 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .contact::before {
+    content: '';
+    position: absolute;
+    top: -120px; right: -120px;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(201,168,76,0.07) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .contact::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: -80px;
+    width: 360px; height: 360px;
+    background: radial-gradient(circle, rgba(201,168,76,0.05) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .contact-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 80px;
+    align-items: start;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Left info panel */
+  .contact-info {}
+
+  .contact-info .section-header {
+    text-align: left;
+    margin-bottom: 36px;
+  }
+
+  .contact-info .section-rule { margin: 18px 0 0; }
+
+  .contact-intro {
+    font-size: 1.05rem;
+    font-weight: 300;
+    color: var(--text-mid);
+    line-height: 1.85;
+    font-style: italic;
+    margin-top: 24px;
+    margin-bottom: 44px;
+  }
+
+  .contact-detail-list { list-style: none; display: flex; flex-direction: column; gap: 28px; }
+
+  .contact-detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 22px;
+    transition: transform 0.3s ease;
+  }
+  .contact-detail-item:hover { transform: translateX(4px); }
+
+  .detail-icon {
+    width: 48px; height: 48px; flex-shrink: 0;
+    background: linear-gradient(135deg, var(--warm-brown) 0%, rgba(59,42,20,0.8) 100%);
+    border: 1px solid rgba(201,168,76,0.3);
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 2px;
+  }
+
+  .detail-icon svg { width: 18px; height: 18px; stroke: var(--gold); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+
+  .detail-label {
+    font-family: 'Tenor Sans', sans-serif;
+    font-size: 0.56rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 5px;
+  }
+
+  .detail-value {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--warm-brown);
+    line-height: 1.5;
+  }
+
+  /* Divider */
+  .contact-divider {
+    width: 1px;
+    background: linear-gradient(180deg, transparent, var(--gold-dark), transparent);
+    align-self: stretch;
+    display: none; /* shown via grid gap */
+  }
+
+  /* Right form panel */
+  .contact-form-wrap {
+    background: #fff;
+    border: 1px solid rgba(201,168,76,0.16);
+    padding: 56px 52px 60px;
+    position: relative;
+    box-shadow: 0 2px 16px rgba(26,18,8,0.04), 0 12px 48px rgba(26,18,8,0.08);
+    border-radius: 2px;
+  }
+
+  /* Corner ornaments */
+  .contact-form-wrap::before,
+  .contact-form-wrap::after {
+    content: '';
+    position: absolute;
+    width: 28px; height: 28px;
+    border-color: var(--gold);
+    border-style: solid;
+  }
+  .contact-form-wrap::before {
+    top: -1px; left: -1px;
+    border-width: 2px 0 0 2px;
+  }
+  .contact-form-wrap::after {
+    bottom: -1px; right: -1px;
+    border-width: 0 2px 2px 0;
+  }
+
+  .form-title {
+    font-family: 'Cinzel', serif;
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: var(--warm-brown);
+    letter-spacing: 0.08em;
+    margin-bottom: 8px;
+  }
+
+  .form-subtitle {
+    font-size: 0.96rem;
+    color: var(--text-mid);
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 38px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid rgba(201,168,76,0.14);
+    letter-spacing: 0.002em;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 22px;
+  }
+
+  .form-group.full { grid-column: 1 / -1; }
+
+  .form-label {
+    font-family: 'Tenor Sans', sans-serif;
+    font-size: 0.56rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--gold-dark);
+  }
+
+  .form-input,
+  .form-select,
+  .form-textarea {
+    background: #fff;
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 2px;
+    padding: 14px 18px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    color: var(--dark);
+    outline: none;
+    transition: all 0.3s ease;
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+    letter-spacing: 0.003em;
+  }
+
+  .form-input::placeholder,
+  .form-textarea::placeholder { color: rgba(107,82,48,0.35); font-style: italic; }
+
+  .form-input:focus,
+  .form-select:focus,
+  .form-textarea:focus {
+    border-color: var(--gold);
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(201,168,76,0.08), 0 4px 20px rgba(201,168,76,0.12);
+  }
+
+  .form-select-wrap { position: relative; }
+  .form-select-wrap::after {
+    content: '▾';
+    position: absolute; right: 14px; top: 50%; transform: translateY(-50%);
+    color: var(--gold); font-size: 0.85rem; pointer-events: none;
+  }
+
+  .form-select { cursor: pointer; padding-right: 36px; }
+
+  .form-textarea { resize: vertical; min-height: 130px; line-height: 1.65; }
+
+  .form-submit-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 8px;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .form-note {
+    font-size: 0.8rem;
+    color: rgba(107,82,48,0.55);
+    font-style: italic;
+  }
+
+  .btn-submit {
+    font-family: 'Cinzel', serif;
+    font-size: 0.64rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--dark);
+    background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 100%);
+    border: none;
+    padding: 16px 42px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.25,0.46,0.45,0.94);
+    box-shadow: 0 4px 24px rgba(201,168,76,0.32), 0 2px 8px rgba(201,168,76,0.16);
+    border-radius: 2px;
+  }
+
+  .btn-submit::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.3) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .btn-submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(201,168,76,0.42), 0 4px 12px rgba(201,168,76,0.2);
+  }
+
+  .btn-submit:active { transform: translateY(-1px); }
+
+  .btn-submit.loading { opacity: 0.72; pointer-events: none; }
+
+  /* Success message */
+  .form-success {
+    display: none;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .form-success.visible { display: block; }
+
+  .success-icon {
+    width: 60px; height: 60px;
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 20px;
+  }
+
+  .success-icon svg { width: 26px; height: 26px; stroke: var(--gold); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+  .success-title {
+    font-family: 'Cinzel', serif;
+    font-size: 1.3rem;
+    color: var(--warm-brown);
+    margin-bottom: 10px;
+    letter-spacing: 0.06em;
+  }
+
+  .success-msg {
+    font-size: 0.98rem;
+    color: var(--text-mid);
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.7;
+  }
+
+  /* Error states */
+  .form-input.error,
+  .form-select.error,
+  .form-textarea.error {
+    border-color: #c0392b;
+    border-bottom-color: #c0392b;
+  }
+
+  .field-error {
+    font-size: 0.75rem;
+    color: #c0392b;
+    font-style: italic;
+    margin-top: -4px;
+    display: none;
+  }
+
+  .field-error.visible { display: block; }
+
+  /* ─── FOOTER ─── */
+  footer { background: var(--dark); padding: 64px 5% 36px; border-top: 1px solid var(--gold-dark); }
+  .footer-inner {
+    max-width: 1160px; margin: 0 auto;
+    display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px;
+    padding-bottom: 48px; border-bottom: 1px solid rgba(201,168,76,0.14);
+  }
+  .footer-brand-name { font-family: 'Cinzel', serif; font-size: 1.5rem; color: var(--gold-light); letter-spacing: 0.12em; margin-bottom: 16px; }
+  .footer-tagline { font-size: 0.92rem; font-style: italic; color: rgba(250,246,238,0.42); line-height: 1.8; font-weight: 300; max-width: 270px; }
+  .footer-heading { font-family: 'Tenor Sans', sans-serif; font-size: 0.58rem; letter-spacing: 0.34em; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; }
+  .footer-list { list-style: none; }
+  .footer-list li { font-size: 0.88rem; color: rgba(250,246,238,0.48); margin-bottom: 10px; font-weight: 300; cursor: pointer; transition: color 0.2s; }
+  .footer-list li:hover { color: var(--gold-light); }
+  .footer-copy { text-align: center; margin-top: 30px; font-family: 'Tenor Sans', sans-serif; font-size: 0.58rem; letter-spacing: 0.24em; color: rgba(201,168,76,0.32); text-transform: uppercase; }
+
+  /* ─── FADE IN ─── */
+  .fade-in { opacity: 0; transform: translateY(28px); transition: opacity 0.85s ease, transform 0.85s ease; }
+  .fade-in.visible { opacity: 1; transform: none; }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 960px) {
+    .contact-inner { grid-template-columns: 1fr; gap: 52px; }
+  }
+  @media (max-width: 900px) {
+    .products-grid { grid-template-columns: 1fr; max-width: 440px; }
+    .about-inner { grid-template-columns: 1fr; gap: 48px; }
+    .about-images { height: 360px; }
+    .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+    .form-row { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 600px) {
+    .header-right .tagline { display: none; }
+    .about-img { width: 76%; }
+    .contact-form-wrap { padding: 36px 24px 40px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ─── HEADER ─── -->
+<header>
+  <div class="header-left">
+    <img src="imgs/deesatraders logo.png" alt="Deesa Traders Logo" height="75" width="70">
+    <div>
+      <div class="header-title">
+        Welcome to Deesa Traders!
+        <span>Est. New Jersey, USA</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="header-right">
+    <div class="tagline">
+      Global markets. Local harvests. Exceptional quality
+    </div>
+    <div class="badge">International Export Quality</div>
+  </div>
+</header>
+
+
+<!-- ─── HERO ─── -->
+<section class="hero" id="home">
+  <div class="hero-bg-pattern"></div>
+  <div class="hero-eyebrow">Purveyors of Exceptional Dry Fruits</div>
+  <div class="hero-ornament"></div>
+  <h1 class="hero-headline">Deesa<br><em>Traders</em></h1>
+  <p class="hero-sub">From the world's finest orchards to discerning tables across the globe</p>
+
+  <div class="export-strip">
+    <span class="export-strip-text">Locally Harvested, Globally Exported from</span>
+    <div class="export-strip-divider"></div>
+    <span class="country-tag tag-usa">USA</span>
+    <span class="country-sep">·</span>
+    <span class="country-tag tag-india">INDIA</span>
+    <span class="country-sep">·</span>
+    <span class="country-tag tag-me">MIDDLE EAST</span>
+  </div>
+
+  <div class="hero-scroll" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">
+    <div class="scroll-line"></div>
+    <span>Discover</span>
+  </div>
+</section>
+
+
+<!-- ─── MARQUEE ─── -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span class="marquee-item"><span class="marquee-dot"></span>California Almonds</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Premium Pistachios</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Walnuts</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>US No.1 Supreme Brand</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>International Export Quality</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Raw &amp; Roasted Varieties</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>California Almonds</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Premium Pistachios</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Walnuts</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>US No.1 Supreme Brand</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>International Export Quality</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Raw &amp; Roasted Varieties</span>
+  </div>
+</div>
+
+
+<!-- ─── PRODUCTS ─── -->
+<section class="products" id="products">
+  <div class="section-header fade-in">
+    <div class="section-eyebrow">Our Signature Selection</div>
+    <h2 class="section-title">Finest Premium Dry Fruits</h2>
+    <div class="section-rule"></div>
+  </div>
+
+  <div class="products-grid">
+    <div class="product-card fade-in">
+      <div class="card-img-wrap">
+        <img src="imgs/Screenshot 2026-03-15 193924.png" alt="California Almonds">
+        <div class="card-img-label">Export Grade</div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-name">California Almonds</h3>
+        <p class="card-desc">Sun-kissed in the fertile valleys of California, our almonds carry the distinction of the US No.1 Supreme grade — prized for their plump kernels, rich buttery flavour, and unrivalled nutritional depth. Available raw or roasted, in versatile bulk options.</p>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" style="transition-delay:0.15s">
+      <div class="card-img-wrap">
+        <img src="imgs/Screenshot 2026-03-15 193951.png" alt="Premium Pistachios">
+        <div class="card-img-label">Export Grade</div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-name">Premium Pistachios</h3>
+        <p class="card-desc">Carefully selected for their vibrant green hue and naturally split shells, our premium pistachios are a hallmark of quality. Sourced from world-class growing regions, each batch undergoes rigorous grading to meet the exacting standards of our international clients.</p>
+      </div>
+    </div>
+
+    <div class="product-card fade-in" style="transition-delay:0.3s">
+      <div class="card-img-wrap">
+        <img src="imgs/Screenshot 2026-03-23 183305.png" alt="Walnuts">
+        <div class="card-img-label">Export Grade</div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-name">Premium Walnuts</h3>
+        <p class="card-desc">Harvested from premier orchards and celebrated for their rich, earthy complexity, our walnuts deliver both culinary versatility and exceptional nutritional value. Offered in whole, halved, and bulk configurations to suit every trade requirement.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── ABOUT ─── -->
+<section class="about" id="about">
+  <div class="about-inner">
+    <div class="about-images fade-in">
+      <img class="about-img" src="imgs/Screenshot 2026-03-15 193924.png" alt="Almonds">
+      <img class="about-img" src="imgs/Screenshot 2026-03-15 193951.png" alt="Pistachios">
+      <img class="about-img" src="imgs/Screenshot 2026-03-23 183305.png" alt="Walnuts">
+    </div>
+
+    <div class="about-content fade-in" style="transition-delay:0.2s">
+      <div class="section-header">
+        <div class="section-eyebrow">Our Story</div>
+        <h2 class="section-title">About Deesa Traders</h2>
+        <div class="section-rule"></div>
+      </div>
+
+      <p class="about-text">
+        Strategically headquartered in <strong>New Jersey</strong>, Deesa Traders serves as a premier gateway for the global distribution of high-grade exports of <strong>Cashews, Almonds, Walnuts, Peanuts and Pistachios</strong>. Our raw and roasted nut varieties are sourced from the best growers worldwide. We offer a variety of options from raw to roasted as well as a number of bulk sizing options.
+      </p>
+
+      <p class="about-text">
+        We specialize in the export of the prestigious <strong>US No.1 Supreme brand</strong>, bridging the gap between elite American harvests and the growing demands of the Indian and Middle Eastern markets. Our commitment to quality is unwavering, ensuring that only the finest produce enters the international trade stream under our banner.
+      </p>
+
+      <div class="about-stats">
+        <div class="stat-box">
+          <div class="stat-num">3+</div>
+          <div class="stat-label">Global Markets</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">5</div>
+          <div class="stat-label">Premium Varieties</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">NJ</div>
+          <div class="stat-label">Headquartered, USA</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">100%</div>
+          <div class="stat-label">Quality Assured</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── CONTACT ─── -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+
+    <!-- Left: form -->
+    <div class="contact-form-wrap fade-in" style="transition-delay:0.2s">
+      <div id="formBody">
+        <div class="form-title">Send an Enquiry</div>
+        <div class="form-subtitle">Our team will respond within 24 business hours.</div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="firstName">First Name <span style="color:var(--gold)">*</span></label>
+            <input class="form-input" type="text" id="firstName" placeholder="Your first name">
+            <span class="field-error" id="firstNameErr">Please enter your first name.</span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="lastName">Last Name <span style="color:var(--gold)">*</span></label>
+            <input class="form-input" type="text" id="lastName" placeholder="Your last name">
+            <span class="field-error" id="lastNameErr">Please enter your last name.</span>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="email">Email Address <span style="color:var(--gold)">*</span></label>
+            <input class="form-input" type="email" id="email" placeholder="info@deesatraders.com">
+            <span class="field-error" id="emailErr">Please enter a valid email address.</span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="phone">Phone Number</label>
+            <input class="form-input" type="tel" id="phone" placeholder="+1 (000) 000-0000">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="company">Company / Organisation</label>
+            <input class="form-input" type="text" id="company" placeholder="Your company name">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="country">Country</label>
+            <input class="form-input" type="text" id="country" placeholder="Your country">
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-bottom:22px">
+          <label class="form-label" for="interest">Product Interest <span style="color:var(--gold)">*</span></label>
+          <div class="form-select-wrap">
+            <select class="form-select" id="interest">
+              <option value="" disabled selected>Select a product or enquiry type</option>
+              <option value="almonds">California Almonds</option>
+              <option value="pistachios">Premium Pistachios</option>
+              <option value="walnuts">Premium Walnuts</option>
+              <option value="cashews">Cashews</option>
+              <option value="peanuts">Peanuts</option>
+              <option value="mixed">Mixed / Assorted Order</option>
+              <option value="general">General Enquiry</option>
+              <option value="partnership">Export Partnership</option>
+            </select>
+          </div>
+          <span class="field-error" id="interestErr">Please select a product or enquiry type.</span>
+        </div>
+
+        <div class="form-group" style="margin-bottom:28px">
+          <label class="form-label" for="message">Message <span style="color:var(--gold)">*</span></label>
+          <textarea class="form-textarea" id="message" placeholder="Please describe your requirements, quantities, destination markets, or any questions you may have…"></textarea>
+          <span class="field-error" id="messageErr">Please enter your message.</span>
+        </div>
+
+        <div class="form-submit-row">
+          <span class="form-note">* Required fields</span>
+          <button class="btn-submit" id="submitBtn" type="button" onclick="submitForm()">
+            Send Enquiry
+          </button>
+        </div>
+      </div>
+
+      <!-- Success state -->
+      <div class="form-success" id="formSuccess">
+        <div class="success-icon">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div class="success-title">Enquiry Received</div>
+        <p class="success-msg">
+          Thank you for reaching out to Deesa Traders.<br>
+          A member of our team will be in touch within 24 business hours.
+        </p>
+      </div>
+    </div>
+
+    <!-- Right: info -->
+    <div class="contact-info fade-in">
+      <div class="section-header">
+        <div class="section-eyebrow">Reach Out</div>
+        <h2 class="section-title">Contact Us</h2>
+        <div class="section-rule"></div>
+      </div>
+
+      <p class="contact-intro">
+        Whether you are a distributor, importer, or retailer seeking the finest quality dry fruits for your market — we invite you to connect with our team.
+      </p>
+
+      <ul class="contact-detail-list">
+        <li class="contact-detail-item">
+          <div class="detail-icon">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <div class="detail-label">Headquarters</div>
+            <div class="detail-value">New Jersey, USA</div>
+          </div>
+        </li>
+
+        <li class="contact-detail-item">
+          <div class="detail-icon">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <div class="detail-label">Email</div>
+            <div class="detail-value">info@deesatraders.com</div>
+          </div>
+        </li>
+
+        <li class="contact-detail-item">
+          <div class="detail-icon">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 5.5 5.5l.82-.82a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 21 16.92z"/></svg>
+          </div>
+          <div>
+            <div class="detail-label">Phone</div>
+            <div class="detail-value">+1 (732)-712-3227</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand-name">Deesa Traders</div>
+      <p class="footer-tagline">A premier gateway for the global distribution of high-grade dry fruit exports. Quality that transcends borders.</p>
+    </div>
+    <div>
+      <div class="footer-heading">Products</div>
+      <ul class="footer-list">
+        <li>California Almonds</li>
+        <li>Premium Pistachios</li>
+        <li>Walnuts</li>
+        <li>Cashews</li>
+        <li>Peanuts</li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-heading">Markets</div>
+      <ul class="footer-list">
+        <li style="color:var(--usa)">United States</li>
+        <li style="color:var(--india)">India</li>
+        <li style="color:var(--me)">Middle East</li>
+      </ul>
+      <div class="footer-heading" style="margin-top:26px">Headquarters</div>
+      <ul class="footer-list">
+        <li>New Jersey, USA</li>
+      </ul>
+    </div>
+  </div>
+  <p class="footer-copy">© 2026 Deesa Traders · International Export Quality · All Rights Reserved</p>
+</footer>
+
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  // ─── Scroll reveal ───
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // ─── Stacked about images ───
+  const aboutImgs = document.querySelectorAll('.about-img');
+  const defaultZ = [3, 2, 1];
+  aboutImgs.forEach((img, i) => {
+    img.addEventListener('mouseleave', () => {
+      setTimeout(() => {
+        aboutImgs.forEach((im, j) => { im.style.zIndex = defaultZ[j]; });
+      }, 360);
+    });
+  });
+
+  // ─── Contact form validation & submit ───
+  function validateField(id, errorId, validatorFn) {
+    const el = document.getElementById(id);
+    const err = document.getElementById(errorId);
+    const valid = validatorFn(el.value.trim());
+    el.classList.toggle('error', !valid);
+    if (err) err.classList.toggle('visible', !valid);
+    return valid;
+  }
+
+  function isEmail(v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
+
+  // ─── Basin endpoint ─────────────────────────────────────────────────────────
+  // Sign up at usebasin.com → create a form → copy your endpoint URL here.
+  // It looks like: https://usebasin.com/f/abc123def456
+  const BASIN_ENDPOINT = 'https://usebasin.com/f/YOUR_FORM_ID';
+  // ────────────────────────────────────────────────────────────────────────────
+
+  async function submitForm() {
+    const v1 = validateField('firstName', 'firstNameErr', v => v.length > 0);
+    const v2 = validateField('lastName',  'lastNameErr',  v => v.length > 0);
+    const v3 = validateField('email',     'emailErr',     v => isEmail(v));
+    const v4 = validateField('interest',  'interestErr',  v => v.length > 0);
+    const v5 = validateField('message',   'messageErr',   v => v.length > 10);
+
+    if (!v1 || !v2 || !v3 || !v4 || !v5) return;
+
+    const btn = document.getElementById('submitBtn');
+    btn.classList.add('loading');
+    btn.textContent = 'Sending…';
+
+    // Build the payload — each key becomes a labelled column in your Basin dashboard
+    const payload = {
+      first_name:       document.getElementById('firstName').value.trim(),
+      last_name:        document.getElementById('lastName').value.trim(),
+      email:            document.getElementById('email').value.trim(),
+      phone:            document.getElementById('phone').value.trim(),
+      company:          document.getElementById('company').value.trim(),
+      country:          document.getElementById('country').value.trim(),
+      product_interest: document.getElementById('interest').value,
+      message:          document.getElementById('message').value.trim(),
+    };
+
+    try {
+      const res = await fetch(BASIN_ENDPOINT, {
+        method:  'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body:    JSON.stringify(payload),
+      });
+
+      if (res.ok) {
+        // Basin accepted the submission — show thank-you state
+        document.getElementById('formBody').style.display = 'none';
+        document.getElementById('formSuccess').classList.add('visible');
+      } else {
+        throw new Error('Basin responded with status ' + res.status);
+      }
+    } catch (err) {
+      console.error('Basin submission error:', err);
+      btn.classList.remove('loading');
+      btn.textContent = 'Send Enquiry';
+      // Show inline error banner
+      let banner = document.getElementById('formErrorBanner');
+      if (!banner) {
+        banner = document.createElement('div');
+        banner.id = 'formErrorBanner';
+        banner.style.cssText = [
+          'margin-top:18px', 'padding:14px 18px',
+          'background:#fff0f0', 'border:1px solid #e0b0b0',
+          'color:#8b2020', 'font-size:0.9rem', 'font-style:italic',
+          "font-family:'Cormorant Garamond',serif", 'line-height:1.5'
+        ].join(';');
+        document.getElementById('formBody').appendChild(banner);
+      }
+      banner.textContent = 'There was a problem sending your enquiry. Please try again, or email us directly at info@deesatraders.com.';
+      banner.style.display = 'block';
+    }
+  }
+
+  // Live validation on blur
+  ['firstName','lastName','email','interest','message'].forEach(id => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.addEventListener('blur', () => {
+      const errId = id + 'Err';
+      if (id === 'email') validateField(id, errId, v => isEmail(v));
+      else if (id === 'message') validateField(id, errId, v => v.length > 10);
+      else validateField(id, errId, v => v.length > 0);
+    });
+    // Clear error styling on input
+    el.addEventListener('input', () => {
+      el.classList.remove('error');
+      const err = document.getElementById(id + 'Err');
+      if (err) err.classList.remove('visible');
+      const banner = document.getElementById('formErrorBanner');
+      if (banner) banner.style.display = 'none';
+    });
+  });
+</script>
+</body>
+</html>
